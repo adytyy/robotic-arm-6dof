@@ -10,3 +10,61 @@ void setup() {
 void loop() {
   myServo.write(90);
 }
+GENERAL CODE AFTER PHYSICAL ASSEMBLY
+#include <Servo.h>
+
+Servo servo1;
+Servo servo2;
+Servo servo3;
+Servo servo4;
+Servo servo5;
+
+void setup() {
+  servo1.attach(9);
+  servo2.attach(10);
+  servo3.attach(11);
+  servo4.attach(12);
+  servo5.attach(13);
+
+  // Home position
+  servo1.write(90);
+  servo2.write(90);
+  servo3.write(90);
+  servo4.write(90);
+  servo5.write(90);
+
+  delay(2000);
+}
+
+void loop() {
+
+  // Servo 1
+  servo1.write(95);
+  delay(1000);
+  servo1.write(90);
+  delay(1000);
+
+  // Servo 2
+  servo2.write(95);
+  delay(1000);
+  servo2.write(90);
+  delay(1000);
+
+  // Servo 3
+  servo3.write(95);
+  delay(1000);
+  servo3.write(90);
+  delay(1000);
+
+  // Servo 4
+  servo4.write(95);
+  delay(1000);
+  servo4.write(90);
+  delay(1000);
+
+  // Servo 5
+  servo5.write(95);
+  delay(1000);
+  servo5.write(90);
+  delay(1000);
+}
